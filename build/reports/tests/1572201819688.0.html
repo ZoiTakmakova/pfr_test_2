@@ -1,0 +1,462 @@
+<html lang="ru"><head>
+	<meta charset="utf-8">
+	<title>Список сервисов</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/ext/bootstrap/css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" href="/ext/bootflat/css/bootflat.min.css" media="screen">
+	<link rel="stylesheet" href="/ext/fonts/roboto-condensed/font.css" type="text/css">
+	<link rel="stylesheet" href="/ext/fonts/pt-sans/font.css" type="text/css">
+	<link rel="stylesheet" href="/thm/es/css/main.css" media="screen">
+	<script src="/ext/dist/common.min.js"></script>
+	<script src="/thm/es/js/script.min.js"></script>
+	<!--[if lt IE 9]>
+	<script>(function () {
+		var a = function () {
+		};
+		window.console = window.console || {log: a, warn: a, error: a, dir: a}
+	})();</script>
+	<script src="/ext/polyfills/es5-shim.min.js"></script>
+	<script src="/ext/polyfills/es5-sham.min.js"></script>
+	<script src="/ext/polyfills/html5shiv.min.js"></script>
+	<script src="/ext/polyfills/html5shiv-printshiv.min.js"></script>
+	<script src="/ext/polyfills/html5shiv-printshiv.min.js"></script>    <![endif]-->    <!--[if lte IE 8]>
+	<link rel="stylesheet" href="/thm/es/mod/oldIE/oldIE.css" type="text/css" media="screen">
+	<script src="/thm/es/mod/oldIE/oldIE.js"></script>    <![endif]-->
+	<link rel="stylesheet" href="/thm/es/mod/esmainpage/css/noauth.css" type="text/css" media="all">
+<link rel="stylesheet" href="/thm/es/mod/esmainpage/css/infoMessage.css" type="text/css" media="all">
+<link rel="stylesheet" href="/thm/es/mod/esmainpage/css/services.css" type="text/css" media="all">
+<link rel="stylesheet" href="/thm/es/mod/esmainpage/css/anonym.css" type="text/css" media="all">
+	<script src="/thm/es/js/dist/common.bundle.min.js?ef136"></script>
+<style type="text/css">.screenshot-wrapper {
+	margin-top: 10px;
+}
+
+.screenshot-wrapper > div {
+	display: inline-block;
+}
+
+.screenshot-wrapper img {
+	max-width: 100%;
+	max-height: 200px;
+}
+
+.screenshot-wrapper .closeBtn {
+	float: right;
+	margin: -10px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	outline: 0;
+	padding: 0;
+	border: 0;
+	position: relative;
+	box-shadow: 1px 2px 6px #ccc;
+	font-family: initial;
+}
+
+.screenshot-comment {
+	position: relative;
+}
+.screenshot-comment ol {
+	padding-left: 1em;
+}
+.screenshot-comment .btnStyle {
+	display: inline-block;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	-webkit-box-shadow: 1px 1px 5px #ececec;
+	-moz-box-shadow: 1px 1px 5px #ececec;
+	box-shadow: 1px 1px 5px #ececec;
+	padding: 0px 10px;
+	margin: 0 5px;
+}
+.screenshot-comment .divider {
+	width: 1px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-right: 1px dashed #bdbdbd;
+	color: #bdbdbd;
+	font-size: 12px;
+}
+.screenshot-comment .divider > span {
+	position: absolute;
+	top: 50%;
+	right: -10px;
+	background: white;
+	margin-top: -10px;
+	line-height: 20px;
+	display: inline-block;
+}
+.screenshot-attach-hint {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-align-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.screenshot-attach-hint > div:nth-of-type(1) {
+	-webkit-flex: 0 2 60%;
+	-ms-flex: 0 2 60%;
+	flex: 0 2 60%;
+	-webkit-align-self: center;
+	-ms-flex-item-align: center;
+	align-self: center;
+}
+.screenshot-attach-hint > div:nth-of-type(2) {
+	-webkit-flex: 0 1 40%;
+	-ms-flex: 0 1  40%;
+	flex: 0 1 40%;
+	-webkit-align-self: center;
+	-ms-flex-item-align: center;
+	align-self: center;
+	text-align: center;
+}
+@media (max-width: 768px) {
+	.screenshot-attach-hint {
+		display: block;
+	}
+	.screenshot-attach-hint > div:nth-of-type(1) {
+		display: none;
+	}
+	.screenshot-attach-hint > div:nth-of-type(2) {
+		text-align: left;
+	}
+}
+
+.feedback-text {
+	margin: 10px 0;
+	font-size: 0.9em;
+}</style></head>
+<body>
+<div class="container" role="main">
+	<div id="upper-header" class="row">
+		<div class="col-sm-8"><a target="_blank" href="http://www.pfrf.ru" title="Сайт Пенсионного фонда Российской Федерации">Пенсионный фонд
+				Российской Федерации</a></div>
+		<div class="col-sm-4">
+			<ul class="social-links">
+				<li><a target="_blank" href="http://www.pfrf.ru/api/news/rss/~press_center" class="rss" title="RSS">&nbsp;</a></li>
+				<li><a target="_blank" href="http://pensionnij-fond.livejournal.com/" class="lj">&nbsp;</a></li>
+				<li><a target="_blank" href="https://www.youtube.com/user/pensionnijfond" class="youtube" title="YouTube">&nbsp;</a></li>
+				<li><a target="_blank" href="https://ok.ru/pensionfond/" class="ok" title="Одноклассники">&nbsp;</a></li>
+				<li><a target="_blank" href="https://vk.com/pension_fond" class="vk" title="ВКонтакте">&nbsp;</a></li>
+				<li><a target="_blank" href="https://twitter.com/#!/pension_fond" class="tweeter" title="Twitter">&nbsp;</a></li>
+				<li>
+					<a target="_blank" href="https://www.facebook.com/pages/%D0%9F%D0%B5%D0%BD%D1%81%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9-%D1%84%D0%BE%D0%BD%D0%B4-%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9-%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8/350819391602397" class="facebook" title="Facebook">
+						&nbsp;</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="header-row" class="row">
+		<div id="top-logo" class="col-md-6 col-sm-7 col-xs-12">
+			<a href="/" title="Перейти на главную">Электронные услуги<br>и сервисы ПФР</a>
+		</div>
+		<div id="auth-info" class="col-md-6 col-sm-5 col-xs-12">
+			<div class="sp20 hidden-xs hidden-sm"></div>
+			<div class="sp10"></div>
+			<ul id="login-options" class="list-inline">
+									<li id="login-link">
+						<form id="login-form" method="post">
+							<input type="hidden" name="need_auth" value="1"> <a href="/" title="Вход" onclick="document.getElementById('login-form').submit(); return false;">Вход</a>
+						</form>
+					</li>
+							</ul>
+		</div>
+	</div>
+	<div id="header-row-border" class="row">
+		<div class="col-xs-12"></div>
+	</div>
+
+	
+	<h1 class="page-title">Список сервисов</h1>
+
+	<div class="clearfix"></div>
+
+	
+	<div id="alerts-cont">
+			</div>
+
+		<div id="services-type-selectors" class="row hidden-xs">
+		
+<div id="infoContainer"></div>
+
+
+		<div class="col-sm-12 services-type-selector services-type-selector-f services-f" data-toggle="services-f">
+			<div class="people-rotator">
+				<img src="/thm/es/mod/esmainpage/img/people/people1_03.png" style="display: none;">
+				<img src="/thm/es/mod/esmainpage/img/people/people2_03.png" style="display: none;">
+				<img src="/thm/es/mod/esmainpage/img/people/people3_03.png" style="display: none;">
+				<img src="/thm/es/mod/esmainpage/img/people/people4_03.png" style="display: block; opacity: 0.53244;">
+				<img src="/thm/es/mod/esmainpage/img/people/people5_03.png" style="display: none;">
+				<img src="/thm/es/mod/esmainpage/img/people/people6_03.png" style="display: none;">
+				<img src="/thm/es/mod/esmainpage/img/people/people7_03.png" style="display: none;">
+				<img src="/thm/es/mod/esmainpage/img/people/people8_03.png" style="display: none;">
+			</div>
+			<span style="line-height: 0.98em">Личный кабинет гражданина</span>
+			<span class="arrow">»</span>
+		</div>
+			</div>
+
+	<div id="services-selector" class="row services-selector">
+		<div class="col-xs-12 visible-xs-block services-type-selector services-type-selector-f services-f" data-toggle="services-f"><h2>Личный кабинет<br>гражданина</h2><span class="arrow">»</span></div>
+		<div class="clearfix hidden visible-xs-block"></div>
+			<div id="services-f" class="services-list col-sm-12">
+		<div class="row">
+			<div class="col-sm-3">
+				<h3>Индивидуальный лицевой счет</h3>
+			</div>
+			<div class="col-sm-3">
+				<h4>Подать заявление:</h4>
+				<ul class="row">
+					<li class="col-sm-12"><a href="/inquiry/snilsDuplicate/">о выдаче дубликата страхового свидетельства</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-3 delimiter-left">
+				<h4>Получить информацию:</h4>
+
+				<ul class="row">
+					<li class="col-sm-12"><a href="/inform/pension/">о сформированных пенсионных правах</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-3">
+				<h4>Заказать справку (выписку):</h4>
+				<ul class="row">
+					<li class="col-sm-12"><a href="/inquiry/szi6/">о состоянии индивидуального лицевого счёта</a><span class="label label-success label-new-service">новое</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3">
+				<h3>Управление средствами пенсионных накоплений</h3>
+			</div>
+			<div class="col-sm-6 delimiter-right">
+				<h4>Подать заявление (уведомление):</h4>
+
+				<ul class="row">
+                    <li class="col-sm-12 col-md-6"><a href="/stmt/uspn/">о выборе инвестиционного портфеля (управляющей компании)</a></li>
+                    <li class="col-sm-12 col-md-6"><a href="/stmt/uspnRefuse/">об отказе от формирования накопительной пенсии</a></li>
+				</ul>
+
+			</div>
+			<div class="col-sm-3">
+				<h4>Получить информацию:</h4>
+				<ul class="row">
+					<li class="col-sm-12"><a href="/inform/insurer/">о страховщике по формированию пенсионных накоплений</a></li>
+					<li class="col-sm-12"><a href="/inquiry/notificationUSPN/">о рассмотренных заявлениях</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3">
+				<h3>Пенсии</h3>
+			</div>
+			<div class="col-sm-6 delimiter-right">
+				<h4>Подать заявление:</h4>
+				<ul class="row">
+					<li class="col-sm-12 col-md-6"><a href="/stmt/pension/">о назначении пенсии</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/pensionEv/">о единовременной выплате средств пенсионных накоплений</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/pensionDelivery/">о доставке пенсии</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/pensionTransfer/">о переводе с одной пенсии на другую</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/pensionPeriod/">о назначении срочной пенсионной выплаты из средств пенсионных накоплений</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/workStatus/">о факте осуществления (прекращения) работы</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/pensionRecalculation/">о перерасчете размера пенсии</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/pensionResumption/">о возобновлении выплаты пенсии</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/pensionDiscontinuation/">о прекращении выплаты пенсии</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/pensionRestoration/">о восстановлении выплаты пенсии</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/pensionWaive/">об отказе от получения назначенной пенсии</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/pensionCase/">о запросе на передачу  выплатного (пенсионного) дела в ТО ПФР по новому месту жительства</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-3">
+				<h4>Получить информацию:</h4>
+				<ul class="row">
+					<li class="col-sm-12"><a href="/inform/socPays/">о пенсионном обеспечении</a></li>
+				</ul>
+				<h4>Заказать справку (выписку):</h4>
+				<ul class="row">
+					<li class="col-sm-12"><a href="/inquiry/socpays/">о назначенных пенсиях и социальных выплатах (на дату)</a><span class="label label-primary label-new-service">обновлён</span></li>
+				</ul>
+				<ul class="row">
+					<li class="col-sm-12"><a href="/inquiry/catCitizens/">об отнесении гражданина к категории граждан предпенсионного возраста</a></li>
+				</ul>
+				<ul class="row">
+					<li class="col-sm-12"><a href="/inquiry/sv/">о произведённых выплатах за период</a><span class="label label-success label-new-service">новое</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3">
+				<h3>Социальные выплаты</h3>
+			</div>
+			<div class="col-sm-6  delimiter-right">
+				<h4>Подать заявление:</h4>
+				<ul class="row">
+					<li class="col-sm-12 col-md-6"><a href="/stmt/edv/">о назначении ежемесячной денежной выплаты</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/edvHigh/">о назначении ежемесячной денежной выплаты в повышенном размере</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/pensionFSD/">об установлении федеральной социальной доплаты к пенсии</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/nsuRefuse/">об отказе от НСУ</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/nsu/">о предоставлении НСУ</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/pensionDelivery/">о доставке социальных выплат</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/nsuRenewal/">о возобновлении НСУ</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/nsuWithdrawal/">об отзыве ранее поданных заявлений по НСУ</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/transport/">о компенсации в виде возмещения фактически произведенных расходов на оплату стоимости проезда к месту отдыха и обратно</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/careKv/">о назначении ежемесячной компенсационной выплаты неработающему трудоспособному лицу, осуществляющему уход за нетрудоспособным гражданином</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/careAgreeInv/">о согласии на осуществление неработающим трудоспособным лицом ухода за нетрудоспособным гражданином</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/careAgreeChild/">о согласии на осуществление неработающим трудоспособным лицом ухода за ребенком-инвалидом в возрасте до 18 лет или инвалидом с детства I группы</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/careEv/">о назначении ежемесячной выплаты неработающему трудоспособному лицу, осуществляющему уход за ребенком-инвалидом в возрасте до 18 лет или инвалидом с детства I группы</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/edvTransfer">о переводе ежемесячной денежной выплаты с одного основания на другое</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/edvWaive">об отказе от получения ежемесячной денежной выплаты</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/pensionSurcharge/">о назначении ежемесячной доплаты к пенсии членам летных экипажей и работникам организаций угольной промышленности</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/meritsReward/">о назначении дополнительного ежемесячного материального обеспечения за выдающиеся достижения и особые заслуги перед Российской Федерацией</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/rksCompensation">о компенсации расходов, связанных с переездом из районов Крайнего Севера и приравненных к ним местностей, лицам, являющимся получателями страховых пенсий и (или) пенсий по государственному пенсионному обеспечению, и членам их семей</a></li>
+				</ul>
+				<ul class="all-social-statements row" style="display:none;">
+				</ul>
+			</div>
+			<div class="col-sm-3">
+				<h4>Получить информацию:</h4>
+				<ul class="row">
+					<li class="col-sm-12"><a href="/inform/socPays/">об установленных социальных выплатах</a></li>
+				</ul>
+				<h4>Заказать справку (выписку):</h4>
+				<ul class="row">
+					<li class="col-sm-12"><a href="/inquiry/socpays/">о назначенных пенсиях и социальных выплатах (на дату)</a><span class="label label-primary label-new-service">обновлён</span></li>
+					<li class="col-sm-12"><a href="/inquiry/veteran/">из Федерального регистра лиц, имеющих право на получение социальной помощи</a></li>
+					<li class="col-sm-12"><a href="/inquiry/nsu/">о праве на получение НСУ</a><span class="label label-success label-new-service">новое</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3">
+				<h3>Материнский (семейный) капитал — МСК</h3>
+			</div>
+			<div class="col-sm-6">
+				<h4>Подать заявление:</h4>
+				<ul class="row">
+					<li class="col-sm-12 col-md-6"><a href="/stmt/msk/">о выдаче государственного сертификата на МСК</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/mskr/">о распоряжении средствами МСК</a></li>
+					<li class="col-sm-12 col-md-6"><a href="/stmt/edvMsk/">о распоряжении средствами МСК на ежемесячную выплату в связи с рождением (усыновлением) второго ребенка</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-3  delimiter-left">
+				<h4>Получить информацию:</h4>
+				<ul class="row">
+					<li class="col-sm-12"><a href="/inform/msk2/">о размере материнского (семейного) капитала (его оставшейся части)</a></li>
+				</ul>
+				<h4>Заказать справку (выписку):</h4>
+				<ul class="row">
+					<li class="col-sm-12"><a href="/inquiry/msk/">о размере материнского (семейного) капитала (его оставшейся части)</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row foreign">
+			<div class="col-sm-3">
+				<h3>Гражданам,<br>проживающим за границей</h3>
+			</div>
+			<div class="col-sm-3">
+			</div>
+			<div class="col-sm-3 delimiter-left">
+				<h4>Получить информацию:</h4>
+
+				<ul class="row">
+					<li class="col-sm-12"><a href="/inform/overseas/">о назначении пенсии</a></li>
+					<li class="col-sm-12"><a href="/inform/overseasPayments/">о произведенных выплатах</a></li>
+					<li class="col-sm-12"><a href="/inform/overseasDocStatus/">о статусе направленных в ПФР документов</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-3">
+				<h4>Заказать справку (выписку):</h4>
+				<ul class="row">
+					<li class="col-sm-12"><a href="/inquiry/overseas/">о пенсии для граждан, проживающих за границей</a></li>
+					<li class="col-sm-12"><a href="/inquiry/overseasPayments/">о выплатах для граждан, проживающих за границей</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+
+			</div>
+<div class="row anonym-services services-selector">
+	<img class="hidden-xs" src="/thm/es/mod/esmainpage/img/anonym.png">
+
+	<div class="col-sm-9 col-sm-offset-3 col-xs-12">
+		<div class="row" style="margin-top: 40px;">
+			<div class="col-sm-4">
+				<ul>
+					<li><a href="/znp/">Запись на приём</a></li>
+					<li><a href="/znpd/">Заказ справок и документов</a></li>
+					<li><a href="/findOffice/">Найти клиентскую службу</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				<ul>
+					<li><a href="/appeal/">Обращения граждан</a></li>
+					<li><a target="_blank" href="http://www.pfrf.ru/knopki/online_kons/">Задать вопрос онлайн</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				<ul>
+					<li><a target="_blank" href="http://www.pfrf.ru/eservices/calc/">Пенсионный калькулятор</a></li>
+					<li><a target="_blank" href="https://www.pfrf.ru/eservices/pay_docs/">Сформировать платёжный документ</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	<div class="row">
+		<div class="col-xs-12 footer-row ">
+			<div class="center-block"></div>
+			<p>© 2014-2019 Пенсионный фонд Российской Федерации</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 hidden-sm-down"></div>
+		<div class="col-md-3 col-sm-12">
+			<div class="esia">
+				<a href="https://esia.gosuslugi.ru/public/ra/" class="esia_svg" title="esia"></a>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-12">
+			<div class="appstore">
+				<a href="https://itunes.apple.com/ru/app/id1202653519" class="itunes" title="itunes"></a>
+				<a href="https://play.google.com/store/apps/details?id=com.pfrf.mobile" class="googleplay" title="googleplay"></a>
+			</div>
+		</div>
+		<div class="col-md-3 hidden-sm-down"></div>
+	</div>
+</div>
+<div id="feedbackModal"><div><p class="text-center feedback-text"><a href="#">Обращение в техническую поддержку (или нажмите Ctrl+ENTER)</a></p></div></div>
+<script src="/thm/es/mod/esmainpage/js/noauth.js"></script>
+<script src="/thm/es/js/dist/infoMessage.min.js?71f42"></script>
+<script src="/thm/es/js/dist/feedback.min.js?1edaf"></script>
+
+</body></html>
